@@ -43,5 +43,37 @@
 <p>Our vision is to grow into a trusted natural skincare brand in South Africa, recognised for its high quality,
     sustainability and strong customer satisfaction</p>
 </div>
+<script>
+  // Fade in the content when the page loads
+  window.addEventListener("load", () => {
+    document.querySelector(".about-content").style.opacity = 0;
+    setTimeout(() => {
+      document.querySelector(".about-content").style.transition = "opacity 2s";
+      document.querySelector(".about-content").style.opacity = 1;
+    }, 300);
+  });
+
+  // Add hover effect to nav links
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("mouseover", () => {
+      link.style.color = "gold";
+    });
+    link.addEventListener("mouseout", () => {
+      link.style.color = "";
+    });
+  });
+
+  // Add a button to reveal extra info
+  const extraBtn = document.createElement("button");
+  extraBtn.textContent = "Learn More";
+  extraBtn.style.marginTop = "20px";
+  document.querySelector(".about-content").appendChild(extraBtn);
+
+  extraBtn.addEventListener("click", () => {
+    alert("Suki Suki Naturals is committed to sustainability and customer happiness 🌸");
+  });
+</script>
+
 </body>
 </html>

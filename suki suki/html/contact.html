@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us-Suki Suki Naturals</title>
-    <link rel="stylesheet" href="../css/stylesheet.css"
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     
@@ -27,11 +28,51 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63571050.40606057!2d-77.38915485!3d13.46984455000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957719ae629f1f%3A0x121f694065089bcd!2sSuki%20Suki%20Naturals!5e0!3m2!1sen!2sza!4v1777534279969!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=RI8M4Wn0j0S8DdeBKI_wG6gjcVAAlutPsSNC0I3OFIFUNFgyVTlFWlpFVFpaNU9XMlJXV0FLVDY5OC4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CdZ0xE6lJHo?si=ULHc9LsnLeHYkh9X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/CdZ0xE6lJHo"
-    allowfullscreen>
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZmX_3-Q6Yec?si=hbnAG7KBJq9nu5U9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CdZ0xE6lJHo?si=Z8NWhK1UUkhtfskz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<form id="myForm">
+<label>Name:</label><br>
+    <input type="text" id="name" placeholder="enter your full name"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="enter your email"><br><br>
+
+    <label>Feedback:</label><br>
+    <textarea type="feedback" id="feedback" placeholder="enter your feedback"></textarea><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" placeholder="enter your password"><br><br>
+
+    <label>Date of birth:</label><br>
+    <input type="date" id="dob" ><br><br>
+
+    <button type="submit"> Submit</button>
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    $("#myForm").submit(function (event) {
+
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let feedback = $("#feedback").val();
+        let password = $("#password").val();
+        let dob = $("#dob").val();
+
+        if (name === "" || email === "" || feedback === "" || password === "" || dob === "") {
+
+            alert("Please complete all fields.");
+            event.preventDefault();
+            return false;
+        }
+
+        alert("Message sent successfully! 🌿 Thank you for contacting us.");
+        return true;
+    });
+
+});
+</script>
 </body>
 </html>
